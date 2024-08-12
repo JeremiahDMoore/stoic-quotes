@@ -39,5 +39,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any inquiries, please contact us at [email@example.com].
 
 ---
+View the app here: https://jeremiahdmoore.github.io/stoic-quotes/
+
 
 *Note: Replace placeholders with actual details as they become available.*
