@@ -1,0 +1,73 @@
+/* Existing CSS - Ensure this is included */
+
+body {
+    background: linear-gradient(to bottom, rgb(106, 99, 150), gray, lightgray);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.faded-image {
+    height: 25vh;
+    max-width: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.faded-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+}
+
+h1 {
+    font-family: Times New Roman, Times, serif;
+    color: rgb(32, 30, 43);
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(238, 234, 209);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+blockquote {
+    font-family: Times New Roman, Times, serif;
+    color: black;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Button styling */
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(106, 99, 150);
+    color: rgb(236, 234, 242);
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: gray;
+}

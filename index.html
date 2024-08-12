@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <!-- Centered and Scaled Image with Faded Edge -->
+        <div style="text-align: center;">
+            <img src="bust.webp" alt="Marcus Aurelius Bust" class="faded-image">
+        </div>
+        <h1>Stoic Quote of the Day</h1>
+        <div class="card">
+            <blockquote id="quoteDisplay">"The best way to predict the future is to invent it." - Alan Kay</blockquote>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="generateButton" class="button">Generate</button>
+        </div>
+    </section>
+    <script>
+        // Function to read quotes from JSON file
+        async function readQuotes() {
+            try {
+                const response = await fetch('stoic_quotes.json');
+                const data = await response.json();
+                displayQuote(data.quotes);
+            } catch (err) {
+                console.error('Error reading the file: ', err);
+            }
+        }
+
+        // Function to display a random quote
+        function displayQuote(quotes) {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+            document.getElementById('quoteDisplay').innerText = `"${quote.split(' - ')[0]}" - ${quote.split(' - ')[1]}`;
+        }
+
+        // Event listener for the Generate button
+        document.getElementById('generateButton').addEventListener('click', readQuotes);
+
+        // Initial call to display a quote
+        readQuotes();
+    </script>
+</body>
+
+</html>
