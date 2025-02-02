@@ -1,7 +1,7 @@
 # Stoic App
 
 ## Description
-The Stoic App is designed to help users incorporate stoicism into their daily lives to improve mental health and well-being. It offers various features that guide users through stoic practices and philosophies.
+The Stoic App is a basic quote generator created by bolt.new in 3 prompts. is designed to help users incorporate stoicism into their daily lives to improve mental health and well-being. It offers various features that guide users through stoic practices and philosophies.
 
 ## Features
 - Daily stoic quotes and reflections
